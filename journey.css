@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* <---=== Nav Section Start ===---> */
+
+.nav-container {
+  max-width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.nav-container ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-container ul li {
+  font-size: 1.5rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+.nav-container ul li:hover {
+  border-bottom: 2px solid #0ef;
+  transition: 0.2s ease-in;
+}
+
+.header {
+  width: 100vw;
+  background-color: #252525;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* <---=== Nav Section End ===---> */
+
+/* <---=== Main Section Start ===---> */
+/* <---=== Home Section Start ===---> */
+
+.home-section {
+  height: 100vh;
+  background-image: url("assets/images/bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* <---=== Home Section End ===---> */
+
+.separation {
+  height: 1.5vh;
+  background-color: rgb(46, 44, 44);
+  position: relative;
+  z-index: 20;
+}
+
+/* <---=== Journey & Gameplays Section Start ===---> */
+
+.journey h2,
+.gameplays h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.25rem 0;
+  text-transform: uppercase;
+}
+
+.journey-videos,
+.gameplays-videos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.journey-videos video,
+.gameplays-videos video {
+  width: 30vw;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+}
+
+/* <---=== Journey & Gameplays Section End ===---> */
+/* <---=== Founder Section Start ===---> */
+
+.founder h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1.25rem 0;
+  text-transform: uppercase;
+}
+
+.profile-card {
+  width: 20vw;
+  margin: 0 auto;
+}
+
+.profile-pic img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-content h3 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 0.6rem 0;
+}
+
+.social-links {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #1282a2;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+.social-links a:hover {
+  border-bottom: 3px solid #1282a2;
+  transition: 0.2s ease-in;
+}
+
+.social-links img {
+  width: 3.7vw;
+  padding-left: 0.5rem;
+}
+
+/* <---=== Founder Section End ===---> */
+/* <---=== Main Section End ===---> */
+
+/* <---=== Footer Section Start ===---> */
+
+.footer {
+  background-color: #252525;
+  padding: 1.25rem;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* <---=== Footer Section End ===---> */
+
+section {
+  scroll-margin: 105px;
+}
+
+/* <---=== Media Queries Section Start ===---> */
+/* <---=== Navbar Responsive Start ===---> */
+
+@media (min-width: 900px) {
+  .menu-bar {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .nav-container ul {
+    display: none;
+  }
+
+  .menu-bar i {
+    font-size: 2.5rem;
+    color: white;
+    padding-right: 0.5rem;
+    cursor: pointer;
+  }
+
+  .menu-bar i:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+  }
+
+  /* <---=== Menu Mobile Section Start ===---> */
+
+  .menu-mobile {
+    background-color: #252525;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100vw);
+    transition: 0.2s ease-in;
+  }
+
+  .menu-mobile ul {
+    list-style-type: none;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .menu-mobile ul a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .menu-mobile ul li {
+    padding: 0.5rem 0;
+    transition: 0.2s ease-in;
+  }
+
+  .menu-mobile ul li:hover {
+    background-color: #495057;
+    color: #0ef;
+    transition: 0.2s ease-in;
+  }
+
+  .show-menu {
+    transform: translateX(0);
+    transition: 0.2s ease-in-out;
+  }
+
+  .close-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .close-btn i {
+    font-size: 2.5rem;
+    color: white;
+    padding: 0.25rem 0.5rem 0 0;
+    cursor: pointer;
+  }
+
+  .close-btn i:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+  }
+}
+
+/* <---=== Menu Mobile Section End ===---> */
+/* <---=== Navbar Responsive End ===---> */
+
+/* <---=== Mobiles Responsive Start ===---> */
+
+@media only screen and (max-width: 767px) {
+  .journey h2,
+  .gameplays h2,
+  .founder h2 {
+    font-size: 2.3rem;
+  }
+
+  .journey-videos video,
+  .gameplays-videos video {
+    width: 45vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-card {
+    width: 30vw;
+  }
+
+  .profile-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
+
+  .social-links img {
+    width: 5vw;
+    padding-left: 0.25rem;
+  }
+
+  .footer {
+    padding: 0.6rem;
+  }
+
+  .footer-items a {
+    font-size: 1.2rem;
+  }
+}
+
+/* <---=== Mobiles Responsive End ===---> */
+/* <---=== Tablets Responsive Start ===---> */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .journey h2,
+  .gameplays h2,
+  .founder h2 {
+    font-size: 2.5rem;
+  }
+
+  .journey-videos video,
+  .gameplays-videos video {
+    width: 30vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-card {
+    width: 25vw;
+  }
+
+  .profile-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
+
+  .social-links img {
+    width: 3.5vw;
+    padding-left: 0.25rem;
+  }
+
+  .footer {
+    padding: 0.6rem;
+  }
+
+  .footer-items a {
+    font-size: 1.2rem;
+  }
+}
+
+/* <---=== Tablets Responsive End ===---> */
+/* <---=== Laptop Responsive Start ===---> */
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .journey h2,
+  .gameplays h2,
+  .founder h2 {
+    font-size: 3rem;
+  }
+
+  .journey-videos video,
+  .gameplays-videos video {
+    width: 30vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-card {
+    width: 20vw;
+  }
+
+  .profile-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
+
+  .social-links img {
+    width: 3vw;
+    padding-left: 0.25rem;
+  }
+
+  .footer {
+    padding: 0.6rem;
+  }
+
+  .footer-items a {
+    font-size: 1.2rem;
+  }
+}
+
+/* <---=== Laptop Responsive End ===---> */
+/* <---=== Desktop & Monitors Responsive Start ===---> */
+
+@media only screen and (min-width: 1440px) {
+  .journey h2,
+  .gameplays h2,
+  .founder h2 {
+    font-size: 3.5rem;
+  }
+
+  .journey-videos video,
+  .gameplays-videos video {
+    width: 30vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-card {
+    width: 20vw;
+  }
+
+  .profile-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
+
+  .social-links img {
+    width: 2.5vw;
+    padding-left: 0.25rem;
+  }
+
+  .footer {
+    padding: 0.6rem;
+  }
+
+  .footer-items a {
+    font-size: 1.5rem;
+  }
+}
+
+/* <---=== Desktop & Monitors Responsive End ===---> */
+/* <---=== Media Queries Section End ===---> */
